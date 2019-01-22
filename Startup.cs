@@ -21,6 +21,7 @@ namespace buffer_middleware
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            // dotnet add package Microsoft.AspNetCore.Buffering
             app.UseResponseBuffering();
 
             app.Use(async (context, next) => {
